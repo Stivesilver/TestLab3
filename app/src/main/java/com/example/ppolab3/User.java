@@ -13,13 +13,13 @@ public class User {
         return username;
     }
     public void setUsername(String username) {
-        UserHelper.username = username;
+        PlayerStat.username = username;
     }
     public String getImageUrl() {
         return imageUrl;
     }
     public void setImageUrl(String imageUrl) {
-        UserHelper.imageUrl = imageUrl;
+        PlayerStat.avatarPath = imageUrl;
     }
     public String getReady(){return ready;}
     public void setReady(String ready) {
