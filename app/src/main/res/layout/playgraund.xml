@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:layout_gravity="fill_horizontal"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Создать игру"
+        android:id="@+id/create_bt"
+        style="@style/ButtonGeneral"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Присоедениться к игре"
+        android:id="@+id/into_bt"
+        style="@style/ButtonGeneral"/>
+    <EditText
+        android:gravity=""
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="Присоедениться к игре"
+        android:id="@+id/code_edit"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:text="Профиль"
+            android:id="@+id/prof_bt"
+            style="@style/ButtonGeneral"/>
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:text="Выйти"
+            android:id="@+id/exit_bt"
+            style="@style/ButtonGeneral"/>
+    </LinearLayout>
+</LinearLayout>

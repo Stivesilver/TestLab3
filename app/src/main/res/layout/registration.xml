@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:layout_gravity="fill_horizontal"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/name_edit"
+        android:hint="Имя"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:id="@+id/email_edit"
+        android:hint="Электронная почта"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:hint="Пароль"
+        android:id="@+id/passwd_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:id="@+id/reg_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Регестрироваться"
+        style="@style/ButtonGeneral"/>
+</LinearLayout>

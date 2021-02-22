@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:text="Расположите корабли" style="@style/TextStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/big_ship"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            style="@style/ButtonGeneral"
+            android:layout_marginHorizontal="10dp"></Button>
+
+        <Button
+            android:id="@+id/medium_ship"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            style="@style/ButtonGeneral"
+            android:layout_marginHorizontal="10dp"></Button>
+
+        <Button
+            android:id="@+id/small_ship"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            style="@style/ButtonGeneral"
+            android:layout_marginHorizontal="10dp"></Button>
+
+        <Button
+            android:id="@+id/single_ship"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            style="@style/ButtonGeneral"
+            android:layout_marginHorizontal="10dp"></Button>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/verticalShip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Вертикально" />
+    </LinearLayout>
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:columnCount="10">
+        <Button android:id="@+id/button_00" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_01" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_02" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_03" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_04" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_05" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_06" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_07" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_08" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_09" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_10" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_11" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_12" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_13" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_14" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_15" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_16" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_17" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_18" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_19" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_20" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_21" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_22" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_23" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_24" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_25" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_26" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_27" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_28" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_29" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_30" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_31" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_32" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_33" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_34" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_35" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_36" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_37" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_38" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_39" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_40" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_41" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_42" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_43" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_44" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_45" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_46" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_47" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_48" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_49" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_50" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_51" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_52" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_53" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_54" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_55" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_56" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_57" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_58" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_59" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_60" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_61" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_62" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_63" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_64" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_65" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_66" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_67" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_68" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_69" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_70" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_71" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_72" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_73" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_74" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_75" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_76" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_77" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_78" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_79" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_80" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_81" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_82" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_83" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_84" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_85" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_86" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_87" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_88" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_89" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_90" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_91" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_92" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_93" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_94" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_95" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_96" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_97" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_98" style="@style/ButtonStyle"/>
+        <Button android:id="@+id/button_99" style="@style/ButtonStyle"/>
+    </GridLayout>
+
+
+    <Button
+        android:id="@+id/btn_go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="В бой"
+        style="@style/ButtonGeneral"
+        android:textSize="40sp"
+        android:layout_marginHorizontal="10dp"/>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ppolab3">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="PPPLab3"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PPOLab3">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Registration"
+            android:label="Регистрация">
+        </activity>
+        <activity android:name=".Playground"
+            android:label="Место для игры">
+        </activity>
+        <activity android:name=".Profile"
+            android:label="Место для игры">
+        </activity>
+        <activity android:name=".ShipActivity"
+            android:label="Найти Соперника"> </activity>
+        <activity android:name=".ShipCompose"
+            android:label="Начать игру"> </activity>
+        <activity android:name=".FightActivity"
+            android:label="Бой"> </activity>
+
+    </application>
+
+</manifest>
