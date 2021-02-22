@@ -31,18 +31,20 @@ public class Playground extends AppCompatActivity {
         intoButton = (Button) findViewById(R.id.into_bt);
         profButton = (Button) findViewById(R.id.prof_bt);
         exitButton = (Button) findViewById(R.id.exit_bt);
+        codeEdit = findViewById(R.id.code_edit);
 
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 reference = rootNode.getReference("games");
-                User user = new User(UserHelper.username, UserHelper.imageUrl);
+                User user = new User(PlayerStat.username, PlayerStat.avatarPath);
                 Game game = new Game(user);
                 reference.child(Game.Id).child("id").setValue(Game.Id);
                 reference.child(Game.Id).child("userFirst").setValue(user);
                 reference.child(Game.Id).child("userSecond").child("username").setValue("");
                 reference.child(Game.Id).child("userSecond").child("imageUrl").setValue("");
                 reference.child(Game.Id).child("userSecond").child("ready").setValue("false");
+
                 Intent intent = new Intent(getApplicationContext(), ShipActivity.class);
                 startActivity(intent);
             }
@@ -51,34 +53,29 @@ public class Playground extends AppCompatActivity {
         intoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText inputKey = findViewById(R.id.code_edit);
-                final String enteredKey = inputKey.getText().toString().trim();
+                String enteredKey = codeEdit.getText().toString().trim();
                 DatabaseReference reference = FirebaseDatabase.getInstance("https://lab3-b9e76-default-rtdb.firebaseio.com/").getReference("games");
                 Query checkUser = reference.orderByChild("id").equalTo(enteredKey);
                 checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if (dataSnapshot.exists()) {
-                            inputKey.setError(null);
 
                             String usernameDB = dataSnapshot.child(enteredKey).child("userFirst").child("username").getValue(String.class);
-                            String imageDB = dataSnapshot.child(enteredKey).child("userFirst").child("imageUrl").getValue(String.class);
+                            String imageDB = dataSnapshot.child(enteredKey).child("userFirst").child("avatarPath").getValue(String.class);
                             String Id = dataSnapshot.child(enteredKey).child("id").getValue(String.class);
-                            User userS = new User(UserHelper.username, UserHelper.imageUrl);
+                            User userS = new User(PlayerStat.username, PlayerStat.avatarPath);
                             User userF = new User(usernameDB, imageDB);
                             referenceS = rootNode.getReference("games");
                             reference.child(enteredKey).child("userSecond").setValue(userS);
                             Game game = new Game(Id, userF, userS);
 
-
                             Intent intent = new Intent(getApplicationContext(), ShipActivity.class);
                             startActivity(intent);
                         } else {
-                            inputKey.setError("No such room exist");
-                            inputKey.requestFocus();
+                            codeEdit.setError("Нет такой комнаты");
                         }
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -86,8 +83,6 @@ public class Playground extends AppCompatActivity {
                 });
             }
         });
-
-        codeEdit = (EditText) findViewById(R.id.code_edit);
 
         profButton.setOnClickListener(new View.OnClickListener() {
             @Override

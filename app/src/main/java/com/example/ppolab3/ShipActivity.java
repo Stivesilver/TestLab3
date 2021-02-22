@@ -95,7 +95,7 @@ public class ShipActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                String userImage = snapshot.child("imageUrl").getValue(String.class);
+                String userImage = snapshot.child("avatarPath").getValue(String.class);
                 String userName = snapshot.child("username").getValue(String.class);
                 if(Game.myUser == UserEnum.SECOND){
                     //Picasso.get().load(Uri.parse(userImage)).into(avatarF);
