@@ -44,8 +44,8 @@ public class Profile extends AppCompatActivity {
         victoryView.setText("Победы: " + PlayerStat.victory);
         defeatView.setText("Поражения: " + PlayerStat.defeat);
 
-       // nameEdit.setText(PlayerStat.getUsername());
-        //passwdEdit.setText(PlayerStat.getPasswd());
+        nameEdit.setText(PlayerStat.username);
+        passwdEdit.setText(PlayerStat.passwd);
 
         changeAvatarButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +54,10 @@ public class Profile extends AppCompatActivity {
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(intent, PICK_IMAGE_REQUEST);
+
+                DatabaseReference reference = FirebaseDatabase.getInstance("https://lab3-b9e76-default-rtdb.firebaseio.com/")
+                        .getReference("users");
+                reference.child(PlayerStat.username).child("avatarPath").setValue(avatarPath.toString());
             }
         });
         saveButton.setOnClickListener(new View.OnClickListener() {

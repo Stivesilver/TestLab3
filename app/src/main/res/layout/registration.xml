@@ -17,6 +17,7 @@
         android:layout_height="50dp" />
 
     <EditText
+        android:inputType="textPassword"
         android:hint="Пароль"
         android:id="@+id/passwd_edit"
         android:layout_width="match_parent"

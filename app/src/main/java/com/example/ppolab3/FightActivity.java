@@ -175,10 +175,10 @@ public class FightActivity extends AppCompatActivity implements View.OnClickList
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()) {
-                        String victoriesDB = dataSnapshot.child(Game.myUsername).child("victories").getValue(String.class);
-                        int victories = Integer.parseInt(victoriesDB);
-                        victories++;
-                        refUsers.child(Game.myUsername).child("victories").setValue(String.valueOf(victories));
+                        String victoryDB = dataSnapshot.child(Game.myUsername).child("victory").getValue(String.class);
+                        int victory = Integer.parseInt(victoryDB);
+                        victory++;
+                        refUsers.child(Game.myUsername).child("victory").setValue(String.valueOf(victory));
                     }
                 }
 
