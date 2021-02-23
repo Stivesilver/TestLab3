@@ -179,6 +179,7 @@ public class FightActivity extends AppCompatActivity implements View.OnClickList
                         int victory = Integer.parseInt(victoryDB);
                         victory++;
                         refUsers.child(Game.myUsername).child("victory").setValue(String.valueOf(victory));
+                        PlayerStat.victory = Integer.toString(victory);
                     }
                 }
 
@@ -213,6 +214,8 @@ public class FightActivity extends AppCompatActivity implements View.OnClickList
                                 int defeat = Integer.parseInt(victoryDB);
                                 defeat++;
                                 refUsers.child(Game.myUsername).child("defeat").setValue(String.valueOf(defeat));
+                                PlayerStat.defeat = Integer.toString(defeat);
+
                             }
                         }
 
