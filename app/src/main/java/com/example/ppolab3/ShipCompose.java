@@ -1,6 +1,5 @@
 package com.example.ppolab3;
 
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -109,6 +108,7 @@ public class ShipCompose extends AppCompatActivity implements View.OnClickListen
                     Game.isReadyMe = false;
                     Game.isReadySecond = false;
                     reference.child(Game.Id).child(Game.myUserPath).child("ready").setValue("false");
+
                     Intent intent = new Intent(getApplicationContext(), FightActivity.class);
                     startActivity(intent);
                 }

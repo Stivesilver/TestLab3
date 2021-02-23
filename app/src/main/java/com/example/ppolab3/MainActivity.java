@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             if (dataSnapshot.exists()) {
                                 passwdDB = dataSnapshot.child(username).child("passwd").getValue(String.class);
-                                Log.d("DOGG", username + passwdDB);
                                 if (passwdDB.equals(passwd)) {
 
                                     usernameDB = dataSnapshot.child(username).child("username").getValue(String.class);

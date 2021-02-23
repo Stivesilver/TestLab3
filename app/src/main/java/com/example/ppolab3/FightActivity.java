@@ -33,6 +33,7 @@ public class FightActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fight);
+
         finish = findViewById(R.id.btn_battle);
 
         if(Game.myUser == UserEnum.SECOND){
@@ -169,7 +170,6 @@ public class FightActivity extends AppCompatActivity implements View.OnClickList
             reference.child(Game.Id).child(Game.myUserPath).child("fireAt").setValue("victory");
             DatabaseReference refUsers = FirebaseDatabase.getInstance("https://lab3-b9e76-default-rtdb.firebaseio.com/").getReference("users");
 
-
             Query checkUser = refUsers.orderByChild("username").equalTo(Game.myUsername);
             checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
@@ -201,6 +201,26 @@ public class FightActivity extends AppCompatActivity implements View.OnClickList
                 }
                 if(cell.equals("victory")){
                     String result = "Вы проиграли";
+
+                    DatabaseReference refUsers = FirebaseDatabase.getInstance("https://lab3-b9e76-default-rtdb.firebaseio.com/").getReference("users");
+
+                    Query checkUser = refUsers.orderByChild("username").equalTo(Game.myUsername);
+                    checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.exists()) {
+                                String victoryDB = dataSnapshot.child(Game.myUsername).child("defeat").getValue(String.class);
+                                int defeat = Integer.parseInt(victoryDB);
+                                defeat++;
+                                refUsers.child(Game.myUsername).child("defeat").setValue(String.valueOf(defeat));
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
                     finish.setText(result);
                     finish.setEnabled(true);
                     return;

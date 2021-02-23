@@ -36,12 +36,10 @@ public class ShipActivity extends AppCompatActivity {
         idtxt = findViewById(R.id.id_room);
         readyBtn = findViewById(R.id.btn_ready);
 
-
-
         idtxt.setText(Game.Id);
 
         //Picasso.get().load(Uri.parse(Game.userFirst.getImageUrl())).into(avatarF);
-        if(Game.userSecond!=null){
+        if(Game.userSecond != null){
             //Picasso.get().load(Uri.parse(Game.userSecond.getImageUrl())).into(avatarS);
             Game.myUser = UserEnum.SECOND;
             Game.myUsername = Game.userSecond.getUsername();
@@ -60,8 +58,6 @@ public class ShipActivity extends AppCompatActivity {
             Game.myUserPath = "userFirst";
         }
 
-
-
         readyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +75,7 @@ public class ShipActivity extends AppCompatActivity {
                     Game.isReadyMe = false;
                     Game.isReadySecond = false;
                     reference.child(Game.Id).child(Game.myUserPath).child("ready").setValue("false new");
+
                     Intent intent = new Intent(getApplicationContext(), ShipCompose.class);
                     startActivity(intent);
                 }
@@ -118,12 +115,15 @@ public class ShipActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.getValue(String.class).equals("true")){
                     Game.isReadySecond = true;
-                }else if(snapshot.getValue(String.class).equals("false")){
+                }
+                else if(snapshot.getValue(String.class).equals("false")){
                     Game.isReadySecond = false;
-                }else {
+                }
+                else {
                     Game.isReadyMe = false;
                     Game.isReadySecond = false;
                     reference.child(Game.Id).child(Game.myUserPath).child("ready").setValue("false new");
+
                     Intent intent = new Intent(getApplicationContext(), ShipCompose.class);
                     startActivity(intent);
                 }
