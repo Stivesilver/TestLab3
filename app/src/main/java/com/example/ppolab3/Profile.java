@@ -69,12 +69,12 @@ public class Profile extends AppCompatActivity {
                     username = username.trim();
                     passwd = passwd.trim();
 
-                    DatabaseReference reference = FirebaseDatabase.getInstance("https://lab3-b9e76-default-rtdb.firebaseio.com/").getReference("users/"+ PlayerStat.username);
-                    reference.child("username").setValue(username);
-                    reference.child("passwd").setValue(passwd);
+                    DatabaseReference reference = FirebaseDatabase.getInstance("https://lab3-b9e76-default-rtdb.firebaseio.com/").getReference("users");
 
-                    PlayerStat.username = username;
-                    PlayerStat.passwd = passwd;
+                    reference.child(PlayerStat.username).removeValue();
+
+                    PlayerStat playerStat = new PlayerStat(username, passwd);
+                    reference.child(username).setValue(playerStat);
 
                     finish();
                 }

@@ -11,6 +11,11 @@ public class PlayerStat{
         PlayerStat.defeat = defeat;
         PlayerStat.avatarPath = avatarPath;
     }
+
+    PlayerStat(String username, String passwd){
+        PlayerStat.username = username;
+        PlayerStat.passwd = passwd;
+    }
     public String getUsername(){
         return PlayerStat.username;
     }
